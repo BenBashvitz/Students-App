@@ -119,4 +119,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/edit_student_details_button"
+        android:layout_width="136dp"
+        android:layout_height="66dp"
+        android:layout_margin="16dp"
+        android:text="EDIT"
+        android:textColor="#424240"
+        android:textSize="18sp"
+        app:backgroundTint="#DEDADA"
+        app:cornerRadius="14dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
