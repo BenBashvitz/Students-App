@@ -8,7 +8,6 @@ class Model private constructor() {
             val student = Student(
                  "Student $i",
                 "ID${1000 + i}",
-                "https://i.pravatar.cc/150?img=$i",
                 false
             )
 
