@@ -1,4 +1,4 @@
-package com.example.classworkactivity.models
+package com.example.studentapp.models
 
 class Model private constructor() {
     val students = mutableListOf<Student>()
@@ -8,6 +8,8 @@ class Model private constructor() {
             val student = Student(
                  "Student $i",
                 "ID${1000 + i}",
+                "05299999${20 + i}",
+                "Rishon Lezion",
                 false
             )
 
