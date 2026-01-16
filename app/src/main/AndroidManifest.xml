@@ -12,7 +12,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.StudentApp">
         <activity
-            android:name=".MainActivity"
+            android:name=".StudentDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".StudentsRecyclerViewActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
