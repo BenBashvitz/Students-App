@@ -30,11 +30,6 @@ class StudentDetailsActivity : AppCompatActivity() {
         val studentId = intent.getStringExtra("student_id") ?: "N/A"
         val studentPresent = intent.getBooleanExtra("student_present", false)
 
-        Log.v("studentName" , studentName)
-        Log.v("studentId", studentId)
-        Log.v("studentPresent", "$studentPresent")
-        Log.v("binding", "$binding")
-
         binding?.studentNameTextView?.text = studentName
         binding?.studentIdTextView?.text = studentId
         binding?.studentPresence?.text = if (studentPresent) "Checked" else "Unchecked"

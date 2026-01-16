@@ -101,6 +101,8 @@
         android:layout_width="20dp"
         android:layout_height="20dp"
         android:layout_marginTop="20dp"
+        android:clickable="false"
+        android:focusable="false"
         app:layout_constraintStart_toStartOf="@+id/student_address_field_text_view"
         app:layout_constraintTop_toBottomOf="@+id/student_address_field_text_view" />
 
