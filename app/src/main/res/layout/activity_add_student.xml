@@ -22,8 +22,8 @@
             android:id="@+id/nameText"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:gravity="center"
-            android:text="Name:"
+            android:gravity="start|center_vertical"
+            android:text="@string/name_label"
             android:textAlignment="viewStart" />
 
         <EditText
@@ -40,18 +40,18 @@
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/ageText"
+            android:id="@+id/idText"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:gravity="center"
-            android:text="Age:"
+            android:gravity="start|center_vertical"
+            android:text="@string/id_label"
             android:textAlignment="viewStart" />
 
         <EditText
-            android:id="@+id/ageInput"
+            android:id="@+id/idInput"
             android:layout_width="240dp"
             android:layout_height="48dp"
-            android:hint="@string/age_hint"
+            android:hint="@string/id_hint"
             android:inputType="text" />
     </LinearLayout>
 
@@ -64,8 +64,8 @@
             android:id="@+id/phoneText"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:gravity="center"
-            android:text="Phone:"
+            android:gravity="start|center_vertical"
+            android:text="@string/phone_label"
             android:textAlignment="viewStart" />
 
         <EditText
@@ -86,8 +86,8 @@
             android:id="@+id/addressText"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:gravity="center"
-            android:text="Address:"
+            android:gravity="start|center_vertical"
+            android:text="@string/address_label"
             android:textAlignment="viewStart" />
 
         <EditText
@@ -108,8 +108,8 @@
             android:id="@+id/isPresentText"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:gravity="center"
-            android:text="isPresent"
+            android:gravity="start|center_vertical"
+            android:text="@string/ispresent_label"
             android:textAlignment="viewStart" />
 
         <CheckBox

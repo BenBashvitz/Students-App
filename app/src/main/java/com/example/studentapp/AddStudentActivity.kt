@@ -17,14 +17,14 @@ class AddStudentActivity : AppCompatActivity() {
 
         binding.saveButton.setOnClickListener {
             val name = binding.nameInput.text.toString()
-            val age = binding.ageInput.text.toString()
+            val id = binding.idInput.text.toString()
             val phone = binding.phoneInput.text.toString()
             val address = binding.addressInput.text.toString()
             val isPresent = binding.isPresentCheckbox.isChecked
 
             Model.shared.students.add(Student(
                 name,
-                age,
+                id,
                 phone,
                 address,
                 isPresent
