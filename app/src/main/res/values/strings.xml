@@ -4,10 +4,13 @@
     <string name="id_hint">ID</string>
     <string name="address_hint">Address</string>
     <string name="phone_hint">phone</string>
+    <string name="save_student_text">Save</string>
+    <string name="cancel_edit_student_text">Cancel</string>
+    <string name="delete_student_text">Delete</string>
+    <string name="student_profile_picture_desc">Student Profile Picture</string>
     <string name="name_label">Name:</string>
     <string name="id_label">ID:</string>
     <string name="phone_label">Phone:</string>
     <string name="address_label">Address:</string>
     <string name="ispresent_label">isPresent</string>
-    <string name="save_student_text">Save</string>
 </resources>
