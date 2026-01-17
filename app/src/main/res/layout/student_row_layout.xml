@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <ImageView
+    <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/avatar_image_view"
         android:layout_width="100dp"
         android:layout_height="100dp"
@@ -16,7 +16,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_launcher_foreground" />
 
-    <TextView
+    <com.google.android.material.textview.MaterialTextView
         android:id="@+id/name_text_view"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -29,7 +29,7 @@
         app:layout_constraintStart_toEndOf="@+id/avatar_image_view"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <CheckBox
+    <com.google.android.material.checkbox.MaterialCheckBox
         android:id="@+id/checkbox"
         android:layout_width="0dp"
         android:layout_height="48dp"
@@ -37,7 +37,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
+    <com.google.android.material.textview.MaterialTextView
         android:id="@+id/id_text_view"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
