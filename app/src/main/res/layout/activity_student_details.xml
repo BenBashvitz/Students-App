@@ -28,12 +28,12 @@
         android:id="@+id/avatar_image_view"
         android:layout_width="wrap_content"
         android:layout_height="200dp"
-        android:layout_marginStart="45dp"
+        android:layout_marginStart="40dp"
         android:layout_marginTop="20dp"
         android:scaleType="fitStart"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/title_text_view"
         app:srcCompat="@drawable/avatar" />
 
     <com.google.android.material.textview.MaterialTextView
@@ -106,12 +106,12 @@
         app:layout_constraintTop_toBottomOf="@+id/student_address_field_text_view" />
 
     <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/textView"
+        android:id="@+id/title_text_view"
         android:layout_width="0dp"
         android:layout_height="47dp"
         android:background="#DEDADA"
         android:gravity="center_vertical"
-        android:paddingStart="12dp"
+        android:paddingStart="20dp"
         android:text="Students Details"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
