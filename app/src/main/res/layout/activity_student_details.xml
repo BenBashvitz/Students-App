@@ -19,7 +19,7 @@
         android:id="@+id/student_phone_field_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="20dp"
         android:text="Phone"
         app:layout_constraintStart_toStartOf="@+id/student_id_field_text_view"
         app:layout_constraintTop_toBottomOf="@+id/student_id_field_text_view" />
@@ -50,7 +50,7 @@
         android:id="@+id/student_id_field_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="20dp"
         android:text="Id"
         app:layout_constraintStart_toStartOf="@+id/student_name_field_text_view"
         app:layout_constraintTop_toBottomOf="@+id/student_name_field_text_view" />
