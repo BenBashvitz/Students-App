@@ -13,13 +13,13 @@ class StudentRowViewHolder(
     private var student: Student? = null
 
     init {
-        binding.checkbox.setOnClickListener {
-            student?.isPresent = binding.checkbox.isChecked
+        this.binding.checkbox.setOnClickListener {
+            this.student?.isPresent = binding.checkbox.isChecked
         }
 
         itemView.setOnClickListener {
-            student?.let { student ->
-                listener?.onStudentItemClick(student)
+            this.student?.let { student ->
+                this.listener?.onStudentItemClick(student)
             }
         }
     }
@@ -27,12 +27,11 @@ class StudentRowViewHolder(
     fun bind(student: Student, position: Int) {
         this.student = student
 
-        binding.nameTextView.text = student.name
-        binding.idTextView.text = student.id
-        binding.checkbox.apply {
+        this.binding.nameTextView.text = student.name
+        this.binding.idTextView.text = student.id
+        this.binding.checkbox.apply {
             isChecked = student.isPresent
             tag = position
         }
     }
-
 }

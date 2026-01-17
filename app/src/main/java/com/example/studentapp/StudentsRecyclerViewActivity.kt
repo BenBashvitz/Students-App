@@ -18,9 +18,9 @@ class StudentsRecyclerViewActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
 
-        binding = ActivityStudentsRecyclerViewBinding.inflate(layoutInflater)
+        this.binding = ActivityStudentsRecyclerViewBinding.inflate(layoutInflater)
 
-        setContentView(binding?.root)
+        setContentView(this.binding?.root)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
@@ -28,9 +28,9 @@ class StudentsRecyclerViewActivity : AppCompatActivity() {
         }
 
         val layout = LinearLayoutManager(this)
-        binding?.recyclerView?.layoutManager = layout
+        this.binding?.recyclerView?.layoutManager = layout
 
-        binding?.recyclerView?.setHasFixedSize(true)
+        this.binding?.recyclerView?.setHasFixedSize(true)
 
         val adapter = StudentsAdapter(Model.shared.students)
 
@@ -40,7 +40,7 @@ class StudentsRecyclerViewActivity : AppCompatActivity() {
             }
         }
 
-        binding?.recyclerView?.adapter = adapter
+        this.binding?.recyclerView?.adapter = adapter
 
     }
 

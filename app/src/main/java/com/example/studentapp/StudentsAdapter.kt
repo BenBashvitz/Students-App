@@ -32,7 +32,4 @@ class StudentsAdapter (
     ) {
         holder.bind(students[position], position)
     }
-
-
-
 }
