@@ -15,7 +15,7 @@
             android:name=".StudentDetailsActivity"
             android:exported="false" />
         <activity
-            android:name=".StudentsRecyclerViewActivity"
+            android:name=".StudentListActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
