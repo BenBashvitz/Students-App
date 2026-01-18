@@ -9,16 +9,16 @@ import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.classworkactivity.models.Model
 import com.example.classworkactivity.models.Student
-import com.example.studentapp.databinding.ActivityStudentsRecyclerViewBinding
+import com.example.studentapp.databinding.ActivityStudentListBinding
 
-class StudentsRecyclerViewActivity : AppCompatActivity() {
-    var binding: ActivityStudentsRecyclerViewBinding? = null
+class StudentListActivity : AppCompatActivity() {
+    var binding: ActivityStudentListBinding? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
 
-        this.binding = ActivityStudentsRecyclerViewBinding.inflate(layoutInflater)
+        this.binding = ActivityStudentListBinding.inflate(layoutInflater)
 
         setContentView(this.binding?.root)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
@@ -47,7 +47,7 @@ class StudentsRecyclerViewActivity : AppCompatActivity() {
     private fun presentToastFor(student: Student){
         val presentStatus = if (student.isPresent) "present" else "absent"
 
-        Toast.makeText(this@StudentsRecyclerViewActivity, "${student.name} is $presentStatus",
+        Toast.makeText(this@StudentListActivity, "${student.name} is $presentStatus",
             Toast.LENGTH_SHORT).show()
     }
 }
