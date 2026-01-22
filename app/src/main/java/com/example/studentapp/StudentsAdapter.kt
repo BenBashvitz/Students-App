@@ -3,7 +3,7 @@ package com.example.studentapp
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.classworkactivity.models.Student
+import com.example.studentapp.models.Student
 import com.example.studentapp.databinding.StudentRowLayoutBinding
 
 interface OnItemClickListener {

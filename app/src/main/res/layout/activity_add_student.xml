@@ -7,104 +7,75 @@
     android:padding="16dp">
 
     <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:contentDescription="Student Profile Picture"
-        tools:srcCompat="@tools:sample/avatars" />
+        android:id="@+id/avatar_image_view"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
+        app:srcCompat="@drawable/ic_launcher_foreground" />
 
-    <LinearLayout
+    <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        app:hintEnabled="true"
+        app:boxBackgroundMode="outline">
 
-        <TextView
-            android:id="@+id/nameText"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:gravity="start|center_vertical"
-            android:text="@string/name_label"
-            android:textAlignment="viewStart" />
-
-        <EditText
+        <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/nameInput"
-            android:layout_width="240dp"
-            android:layout_height="48dp"
-            android:hint="@string/name_hint"
-            android:inputType="text" />
-    </LinearLayout>
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/name_hint" />
 
-    <LinearLayout
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        app:hintEnabled="true"
+        app:boxBackgroundMode="outline">
 
-        <TextView
-            android:id="@+id/idText"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:gravity="start|center_vertical"
-            android:text="@string/id_label"
-            android:textAlignment="viewStart" />
-
-        <EditText
+        <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/idInput"
-            android:layout_width="240dp"
-            android:layout_height="48dp"
-            android:hint="@string/id_hint"
-            android:inputType="text" />
-    </LinearLayout>
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/id_hint" />
 
-    <LinearLayout
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        app:hintEnabled="true"
+        app:boxBackgroundMode="outline">
 
-        <TextView
-            android:id="@+id/phoneText"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:gravity="start|center_vertical"
-            android:text="@string/phone_label"
-            android:textAlignment="viewStart" />
-
-        <EditText
+        <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/phoneInput"
-            android:layout_width="240dp"
-            android:layout_height="48dp"
-            android:hint="@string/phone_hint"
-            android:inputType="phone" />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/phone_hint" />
 
-    </LinearLayout>
+    </com.google.android.material.textfield.TextInputLayout>
 
-    <LinearLayout
+    <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        app:hintEnabled="true"
+        app:boxBackgroundMode="outline">
 
-        <TextView
-            android:id="@+id/addressText"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:gravity="start|center_vertical"
-            android:text="@string/address_label"
-            android:textAlignment="viewStart" />
-
-        <EditText
+        <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/addressInput"
-            android:layout_width="240dp"
-            android:layout_height="48dp"
-            android:hint="@string/address_hint"
-            android:inputType="text" />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/address_hint" />
 
-    </LinearLayout>
+    </com.google.android.material.textfield.TextInputLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-        <TextView
+        <com.google.android.material.textview.MaterialTextView
             android:id="@+id/isPresentText"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
@@ -112,20 +83,24 @@
             android:text="@string/ispresent_label"
             android:textAlignment="viewStart" />
 
-        <CheckBox
+        <com.google.android.material.checkbox.MaterialCheckBox
             android:id="@+id/isPresentCheckbox"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_width="48dp"
+            android:layout_height="48dp"/>
     </LinearLayout>
 
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/saveButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:backgroundTint="#DEDADA"
+            app:cornerRadius="14dp"
             android:layout_gravity="bottom|end"
             android:text="@string/save_student_text" />
     </FrameLayout>

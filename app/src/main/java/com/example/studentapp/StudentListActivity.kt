@@ -1,18 +1,29 @@
 package com.example.studentapp
 
+import android.app.Activity
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.classworkactivity.models.Model
-import com.example.classworkactivity.models.Student
+import com.example.studentapp.models.Model
+import com.example.studentapp.models.Student
 import com.example.studentapp.databinding.ActivityStudentListBinding
 
 class StudentListActivity : AppCompatActivity() {
     var binding: ActivityStudentListBinding? = null
+    var adapter: StudentsAdapter? = null
+
+    private val getContent =
+        registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
+            if (result.resultCode == Activity.RESULT_OK) {
+                this.adapter?.notifyItemInserted(Model.shared.students.size - 1)
+            }
+        }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,9 +43,9 @@ class StudentListActivity : AppCompatActivity() {
 
         this.binding?.recyclerView?.setHasFixedSize(true)
 
-        val adapter = StudentsAdapter(Model.shared.students)
+        this.adapter = StudentsAdapter(Model.shared.students)
 
-        adapter.listener = object: OnItemClickListener {
+        this.adapter?.listener = object: OnItemClickListener {
             override fun onStudentItemClick(student: Student) {
                 presentToastFor(student)
             }
@@ -42,6 +53,10 @@ class StudentListActivity : AppCompatActivity() {
 
         this.binding?.recyclerView?.adapter = adapter
 
+        this.binding?.addStudentButton?.setOnClickListener {
+            val intent = Intent(this@StudentListActivity, AddStudentActivity::class.java)
+            this.getContent.launch(intent)
+        }
     }
 
     private fun presentToastFor(student: Student){
