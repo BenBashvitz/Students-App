@@ -4,10 +4,6 @@
     <string name="id_hint">ID</string>
     <string name="address_hint">Address</string>
     <string name="phone_hint">phone</string>
-    <string name="name_label">Name:</string>
-    <string name="id_label">ID:</string>
-    <string name="phone_label">Phone:</string>
-    <string name="address_label">Address:</string>
     <string name="ispresent_label">isPresent</string>
     <string name="save_student_text">Save</string>
 </resources>
