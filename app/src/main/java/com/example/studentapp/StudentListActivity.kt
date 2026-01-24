@@ -44,7 +44,7 @@ class StudentListActivity : AppCompatActivity() {
 
         this.adapter = StudentsAdapter(Model.shared.students)
 
-        this.binding?.topAppBar?.setNavigationOnClickListener {
+        this.binding?.appBar?.setNavigationOnClickListener {
             finish()
         }
 

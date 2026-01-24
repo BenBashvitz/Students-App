@@ -33,7 +33,7 @@ class StudentDetailsActivity : AppCompatActivity() {
         binding?.studentIdTextView?.text = studentId
         binding?.studentPresenceCheckbox?.isChecked = studentPresent
 
-        binding?.topAppBar?.setNavigationOnClickListener {
+        binding?.appBar?.setNavigationOnClickListener {
             finish()
         }
     }

@@ -8,7 +8,7 @@
     android:padding="0dp">
 
     <com.google.android.material.appbar.MaterialToolbar
-        android:id="@+id/topAppBar"
+        android:id="@+id/app_bar"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="-8dp"
@@ -32,7 +32,7 @@
         android:layout_marginTop="20dp"
         android:scaleType="fitStart"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/topAppBar"
+        app:layout_constraintTop_toBottomOf="@+id/app_bar"
         app:srcCompat="@drawable/avatar" />
 
     <com.google.android.material.textfield.TextInputLayout

@@ -26,7 +26,7 @@ class AddStudentActivity : AppCompatActivity() {
             insets
         }
 
-        this.binding?.topAppBar?.setNavigationOnClickListener {
+        this.binding?.appBar?.setNavigationOnClickListener {
             finish()
         }
 
