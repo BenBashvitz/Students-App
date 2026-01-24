@@ -18,7 +18,7 @@ class StudentListActivity : AppCompatActivity() {
     var binding: ActivityStudentListBinding? = null
     var adapter: StudentsAdapter? = null
 
-    private val getContent =
+    private val addStudentActivityResultLauncher =
         registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
             if (result.resultCode == Activity.RESULT_OK) {
                 this.adapter?.notifyItemInserted(Model.shared.students.size - 1)
@@ -54,15 +54,15 @@ class StudentListActivity : AppCompatActivity() {
         this.binding?.recyclerView?.adapter = adapter
 
         this.binding?.addStudentButton?.setOnClickListener {
-            val intent = Intent(this@StudentListActivity, AddStudentActivity::class.java)
-            this.getContent.launch(intent)
+            val intent = Intent(this, AddStudentActivity::class.java)
+            this.addStudentActivityResultLauncher.launch(intent)
         }
     }
 
     private fun presentToastFor(student: Student){
         val presentStatus = if (student.isPresent) "present" else "absent"
 
-        Toast.makeText(this@StudentListActivity, "${student.name} is $presentStatus",
+        Toast.makeText(this, "${student.name} is $presentStatus",
             Toast.LENGTH_SHORT).show()
     }
 }
