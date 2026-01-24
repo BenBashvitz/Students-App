@@ -20,9 +20,10 @@
         android:id="@+id/nameTextInputLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:hint="@string/name_label"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/avatar_image_view"
-        android:hint="@string/name_label" >
+        app:layout_constraintTop_toBottomOf="@id/avatar_image_view">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/nameInputTextField"
@@ -35,13 +36,15 @@
         android:id="@+id/idTextInputLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="@string/id_label"
         app:layout_constraintTop_toBottomOf="@+id/nameTextInputLayout"
-        android:hint="@string/id_label" >
+        tools:layout_editor_absoluteX="16dp">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/idInputTextField"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -49,13 +52,15 @@
         android:id="@+id/phoneTextInputLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="@string/phone_label"
         app:layout_constraintTop_toBottomOf="@+id/idTextInputLayout"
-        android:hint="@string/phone_label" >
+        tools:layout_editor_absoluteX="16dp">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/phoneInputTextField"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -63,21 +68,24 @@
         android:id="@+id/addressTextInputLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="@string/address_label"
         app:layout_constraintTop_toBottomOf="@+id/phoneTextInputLayout"
-        android:hint="@string/address_label" >
+        tools:layout_editor_absoluteX="16dp">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/addressInputTextField"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/isPresentText"
         android:layout_width="wrap_content"
-        android:layout_height="48dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
         android:gravity="start|center_vertical"
         android:text="@string/is_checked_label"
         android:textAlignment="viewStart"
@@ -86,8 +94,9 @@
 
     <com.google.android.material.checkbox.MaterialCheckBox
         android:id="@+id/isPresentCheckbox"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="20dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/addressTextInputLayout" />
 
