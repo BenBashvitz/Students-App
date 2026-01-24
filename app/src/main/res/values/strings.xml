@@ -13,4 +13,6 @@
     <string name="edit_button">EDIT</string>
 
     <string name="placeholder_text">TextView</string>
+    <string name="not_available">N/A</string>
+    <string name="student_presence_checked">Checked</string>
 </resources>
