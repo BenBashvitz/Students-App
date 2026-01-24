@@ -26,6 +26,10 @@ class AddStudentActivity : AppCompatActivity() {
             insets
         }
 
+        this.binding?.topAppBar?.setNavigationOnClickListener {
+            finish()
+        }
+
         this.binding?.saveButton?.setOnClickListener {
             val name = this.binding?.nameInputTextField?.text.toString()
             val id = this.binding?.idInputTextField?.text.toString()
