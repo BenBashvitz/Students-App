@@ -1,7 +1,7 @@
 package com.example.studentapp
 
 import androidx.recyclerview.widget.RecyclerView
-import com.example.classworkactivity.models.Student
+import com.example.studentapp.models.Student
 import com.example.studentapp.databinding.StudentRowLayoutBinding
 import kotlin.apply
 import kotlin.let
