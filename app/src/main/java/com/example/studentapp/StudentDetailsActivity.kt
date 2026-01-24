@@ -31,7 +31,6 @@ class StudentDetailsActivity : AppCompatActivity() {
 
         binding?.studentNameTextView?.text = studentName
         binding?.studentIdTextView?.text = studentId
-        binding?.studentPresence?.text = getString(R.string.student_presence_checked)
         binding?.studentPresenceCheckbox?.isChecked = studentPresent
     }
 }
