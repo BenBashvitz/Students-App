@@ -35,7 +35,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout2"
-        tools:layout_editor_absoluteX="16dp"
         android:hint="@string/id_label" >
 
         <com.google.android.material.textfield.TextInputEditText
@@ -50,7 +49,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout3"
-        tools:layout_editor_absoluteX="16dp"
         android:hint="@string/phone_label" >
 
         <com.google.android.material.textfield.TextInputEditText
@@ -65,7 +63,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout"
-        tools:layout_editor_absoluteX="16dp"
         android:hint="@string/address_label" >
 
         <com.google.android.material.textfield.TextInputEditText
