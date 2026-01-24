@@ -34,9 +34,12 @@
         android:id="@+id/nameTextInputLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
         android:hint="@string/name_label"
-        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/avatar_image_view">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -50,10 +53,13 @@
         android:id="@+id/idTextInputLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
         android:hint="@string/id_label"
-        app:layout_constraintTop_toBottomOf="@+id/nameTextInputLayout"
-        tools:layout_editor_absoluteX="16dp">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nameTextInputLayout">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/idInputTextField"
@@ -66,10 +72,13 @@
         android:id="@+id/phoneTextInputLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
         android:hint="@string/phone_label"
-        app:layout_constraintTop_toBottomOf="@+id/idTextInputLayout"
-        tools:layout_editor_absoluteX="16dp">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/idTextInputLayout">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/phoneInputTextField"
@@ -82,10 +91,13 @@
         android:id="@+id/addressTextInputLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
         android:hint="@string/address_label"
-        app:layout_constraintTop_toBottomOf="@+id/phoneTextInputLayout"
-        tools:layout_editor_absoluteX="16dp">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/phoneTextInputLayout">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/addressInputTextField"
@@ -98,7 +110,7 @@
         android:id="@+id/isPresentText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
         android:gravity="start|center_vertical"
         android:text="@string/student_presence_label"
@@ -110,6 +122,7 @@
         android:id="@+id/isPresentCheckbox"
         android:layout_width="20dp"
         android:layout_height="20dp"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="20dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/addressTextInputLayout" />
