@@ -33,7 +33,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/edit_student_details_button"
+        android:id="@+id/add_student_button"
         android:layout_width="60dp"
         android:layout_height="70dp"
         android:layout_margin="16dp"

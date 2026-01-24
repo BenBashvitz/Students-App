@@ -10,7 +10,6 @@ import com.example.studentapp.databinding.ActivityStudentDetailsBinding
 class StudentDetailsActivity : AppCompatActivity() {
     var binding: ActivityStudentDetailsBinding? = null
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
