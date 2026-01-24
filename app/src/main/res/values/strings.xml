@@ -3,6 +3,7 @@
 
     <string name="students_list">Students List</string>
     <string name="students_details">Students Details</string>
+    <string name="add_student">New Student</string>
 
     <string name="name_label">Name</string>
     <string name="id_label">Id</string>
