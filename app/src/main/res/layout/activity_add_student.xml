@@ -17,7 +17,7 @@
         app:srcCompat="@drawable/avatar" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout2"
+        android:id="@+id/nameTextInputLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -32,10 +32,10 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout3"
+        android:id="@+id/idTextInputLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout2"
+        app:layout_constraintTop_toBottomOf="@+id/nameTextInputLayout"
         android:hint="@string/id_label" >
 
         <com.google.android.material.textfield.TextInputEditText
@@ -46,10 +46,10 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout"
+        android:id="@+id/phoneTextInputLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout3"
+        app:layout_constraintTop_toBottomOf="@+id/idTextInputLayout"
         android:hint="@string/phone_label" >
 
         <com.google.android.material.textfield.TextInputEditText
@@ -60,10 +60,10 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout4"
+        android:id="@+id/addressTextInputLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout"
+        app:layout_constraintTop_toBottomOf="@+id/phoneTextInputLayout"
         android:hint="@string/address_label" >
 
         <com.google.android.material.textfield.TextInputEditText
@@ -82,14 +82,14 @@
         android:text="@string/is_checked_label"
         android:textAlignment="viewStart"
         app:layout_constraintStart_toEndOf="@+id/isPresentCheckbox"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout4" />
+        app:layout_constraintTop_toBottomOf="@id/addressTextInputLayout" />
 
     <com.google.android.material.checkbox.MaterialCheckBox
         android:id="@+id/isPresentCheckbox"
         android:layout_width="48dp"
         android:layout_height="48dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout4" />
+        app:layout_constraintTop_toBottomOf="@+id/addressTextInputLayout" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/saveButton"
