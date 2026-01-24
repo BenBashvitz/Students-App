@@ -14,7 +14,7 @@ class StudentsAdapter (
     private var students: List<Student>
 ): RecyclerView.Adapter<StudentRowViewHolder>() {
     var listener: OnItemClickListener? = null
-    override fun getItemCount(): Int = students.size
+    override fun getItemCount(): Int = this.students.size
 
     override fun onCreateViewHolder(
         parent: ViewGroup,
@@ -23,13 +23,13 @@ class StudentsAdapter (
         val inflator = LayoutInflater.from(parent.context)
         val binding = StudentRowLayoutBinding.inflate(inflator, parent, false)
 
-        return StudentRowViewHolder(binding, listener)
+        return StudentRowViewHolder(binding, this.listener)
     }
 
     override fun onBindViewHolder(
         holder: StudentRowViewHolder,
         position: Int
     ) {
-        holder.bind(students[position], position)
+        holder.bind(this.students[position], position)
     }
 }

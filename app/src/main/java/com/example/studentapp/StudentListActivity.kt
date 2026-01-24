@@ -1,9 +1,7 @@
 package com.example.studentapp
 
-import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
@@ -13,6 +11,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.studentapp.models.Model
 import com.example.studentapp.models.Student
 import com.example.studentapp.databinding.ActivityStudentListBinding
+import kotlin.jvm.java
 
 class StudentListActivity : AppCompatActivity() {
     var binding: ActivityStudentListBinding? = null
@@ -20,7 +19,7 @@ class StudentListActivity : AppCompatActivity() {
 
     private val addStudentActivityResultLauncher =
         registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
-            if (result.resultCode == Activity.RESULT_OK) {
+            if (result.resultCode == RESULT_OK) {
                 this.adapter?.notifyItemInserted(Model.shared.students.size - 1)
             }
         }
@@ -47,7 +46,11 @@ class StudentListActivity : AppCompatActivity() {
 
         this.adapter?.listener = object: OnItemClickListener {
             override fun onStudentItemClick(student: Student) {
-                presentToastFor(student)
+                val intent = Intent(this@StudentListActivity, StudentDetailsActivity::class.java)
+                intent.putExtra("student_name", student.name)
+                intent.putExtra("student_id", student.id)
+                intent.putExtra("student_present", student.isPresent)
+                startActivity(intent)
             }
         }
 
@@ -57,12 +60,5 @@ class StudentListActivity : AppCompatActivity() {
             val intent = Intent(this, AddStudentActivity::class.java)
             this.addStudentActivityResultLauncher.launch(intent)
         }
-    }
-
-    private fun presentToastFor(student: Student){
-        val presentStatus = if (student.isPresent) "present" else "absent"
-
-        Toast.makeText(this, "${student.name} is $presentStatus",
-            Toast.LENGTH_SHORT).show()
     }
 }
