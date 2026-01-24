@@ -130,9 +130,10 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/saveButton"
-        android:layout_width="120dp"
+        android:layout_width="0dp"
         android:layout_height="70dp"
         android:layout_gravity="bottom|end"
+        android:layout_marginStart="8dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
         android:text="@string/save_student_text"
@@ -141,14 +142,16 @@
         app:backgroundTint="#DEDADA"
         app:cornerRadius="14dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/cancelButton" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/cancelButton"
-        android:layout_width="120dp"
+        android:layout_width="0dp"
         android:layout_height="70dp"
         android:layout_gravity="bottom|end"
         android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp"
         android:layout_marginBottom="16dp"
         android:text="@string/cancel_text"
         android:textColor="@color/black"
@@ -156,6 +159,7 @@
         app:backgroundTint="#DEDADA"
         app:cornerRadius="14dp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/saveButton"
         app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
