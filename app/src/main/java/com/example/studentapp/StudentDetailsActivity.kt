@@ -24,13 +24,13 @@ class StudentDetailsActivity : AppCompatActivity() {
             insets
         }
 
-        val studentName = intent.getStringExtra("student_name") ?: "N/A"
-        val studentId = intent.getStringExtra("student_id") ?: "N/A"
+        val notAvailable = getString(R.string.not_available)
+        val studentName = intent.getStringExtra("student_name") ?: notAvailable
+        val studentId = intent.getStringExtra("student_id") ?: notAvailable
         val studentPresent = intent.getBooleanExtra("student_present", false)
 
         binding?.studentNameTextView?.text = studentName
         binding?.studentIdTextView?.text = studentId
-        binding?.studentPresence?.text = if (studentPresent) "Checked" else "Unchecked"
         binding?.studentPresenceCheckbox?.isChecked = studentPresent
     }
 }
