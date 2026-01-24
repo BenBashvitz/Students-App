@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">Student App</string>
+
+    <string name="students_list">Students List</string>
+    <string name="students_details">Students Details</string>
+
+    <string name="name_label">Name</string>
+    <string name="id_label">Id</string>
+    <string name="phone_label">Phone</string>
+    <string name="address_label">Address</string>
+
+    <string name="add_button">+</string>
+    <string name="edit_button">EDIT</string>
+
+    <string name="placeholder_text">TextView</string>
 </resources>

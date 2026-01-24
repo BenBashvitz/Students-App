@@ -1,7 +1,7 @@
 package com.example.studentapp
 
+import android.content.Intent
 import android.os.Bundle
-import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.classworkactivity.models.Model
 import com.example.classworkactivity.models.Student
 import com.example.studentapp.databinding.ActivityStudentListBinding
+import kotlin.jvm.java
 
 class StudentListActivity : AppCompatActivity() {
     var binding: ActivityStudentListBinding? = null
@@ -36,18 +37,15 @@ class StudentListActivity : AppCompatActivity() {
 
         adapter.listener = object: OnItemClickListener {
             override fun onStudentItemClick(student: Student) {
-                presentToastFor(student)
+                val intent = Intent(this@StudentListActivity, StudentDetailsActivity::class.java)
+                intent.putExtra("student_name", student.name)
+                intent.putExtra("student_id", student.id)
+                intent.putExtra("student_present", student.isPresent)
+                startActivity(intent)
             }
         }
 
         this.binding?.recyclerView?.adapter = adapter
 
-    }
-
-    private fun presentToastFor(student: Student){
-        val presentStatus = if (student.isPresent) "present" else "absent"
-
-        Toast.makeText(this@StudentListActivity, "${student.name} is $presentStatus",
-            Toast.LENGTH_SHORT).show()
     }
 }

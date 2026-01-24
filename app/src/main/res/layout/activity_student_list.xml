@@ -16,16 +16,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.4"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/title" />
+        app:layout_constraintTop_toBottomOf="@+id/title_text_view" />
 
-    <TextView
-        android:id="@+id/title"
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/title_text_view"
         android:layout_width="0dp"
         android:layout_height="47dp"
         android:background="#DEDADA"
         android:gravity="center_vertical"
         android:paddingStart="12dp"
-        android:text="Students List"
+        android:text="@string/students_list"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -37,8 +37,8 @@
         android:layout_width="60dp"
         android:layout_height="70dp"
         android:layout_margin="16dp"
-        android:text="+"
-        android:textColor="@color/black"
+        android:text="@string/add_button"
+        android:textColor="#424240"
         android:textSize="18sp"
         app:backgroundTint="#DEDADA"
         app:cornerRadius="14dp"
