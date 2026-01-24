@@ -8,12 +8,13 @@
 
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/avatar_image_view"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="4dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_launcher_foreground" />
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:layout_marginTop="20dp"
+        android:scaleType="fitStart"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_text_view"
+        app:srcCompat="@drawable/avatar" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayout2"
@@ -76,8 +77,9 @@
         android:id="@+id/isPresentText"
         android:layout_width="wrap_content"
         android:layout_height="48dp"
+        android:layout_marginStart="20dp"
         android:gravity="start|center_vertical"
-        android:text="@string/ispresent_label"
+        android:text="@string/is_checked_label"
         android:textAlignment="viewStart"
         app:layout_constraintStart_toEndOf="@+id/isPresentCheckbox"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout4" />
@@ -92,7 +94,7 @@
     <com.google.android.material.button.MaterialButton
         android:id="@+id/saveButton"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="70dp"
         android:layout_gravity="bottom|end"
         android:text="@string/save_student_text"
         android:textColor="@color/black"
@@ -101,5 +103,18 @@
         app:cornerRadius="14dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/cancelButton"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:layout_gravity="bottom|end"
+        android:text="@string/cancel_text"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:backgroundTint="#DEDADA"
+        app:cornerRadius="14dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

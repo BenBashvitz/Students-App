@@ -35,5 +35,11 @@ class AddStudentActivity : AppCompatActivity() {
             setResult(RESULT_OK, returnIntent)
             finish()
         }
+
+        this.binding?.cancelButton?.setOnClickListener {
+            val returnIntent = Intent()
+            setResult(RESULT_CANCELED, returnIntent)
+            finish()
+        }
     }
 }
