@@ -14,11 +14,6 @@
 
     <string name="placeholder_text">TextView</string>
 
-    <string name="name_hint">Name</string>
-    <string name="id_hint">ID</string>
-    <string name="address_hint">Address</string>
-    <string name="phone_hint">phone</string>
-
     <string name="ispresent_label">Checked</string>
     <string name="save_student_text">Save</string>
 </resources>
