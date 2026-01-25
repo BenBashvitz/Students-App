@@ -47,5 +47,9 @@ class StudentDetailsActivity : AppCompatActivity() {
             intent.putExtra("student_present", studentPresent)
             startActivity(intent)
         }
+
+        binding?.appBar?.setNavigationOnClickListener {
+            finish()
+        }
     }
 }
