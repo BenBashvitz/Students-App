@@ -36,20 +36,20 @@ class EditStudentActivity : AppCompatActivity() {
         val studentAddress = intent.getStringExtra("student_address") ?: notAvailable
         val studentPresent = intent.getBooleanExtra("student_present", false)
 
-        binding?.nameInputTextField?.setText(studentName)
-        binding?.idInputTextField?.setText(studentId)
-        binding?.phoneInputTextField?.setText(studentPhone)
-        binding?.addressInputTextField?.setText(studentAddress)
-        binding?.isPresentCheckbox?.isChecked = studentPresent
+        binding?.nameInputEditText?.setText(studentName)
+        binding?.idInputEditText?.setText(studentId)
+        binding?.phoneInputEditText?.setText(studentPhone)
+        binding?.addressInputEditText?.setText(studentAddress)
+        binding?.studentPresenceCheckbox?.isChecked = studentPresent
 
         val studentIndex = intent.getIntExtra("student_index", -1)
 
         this.binding?.saveButton?.setOnClickListener {
-            val name = this.binding?.nameInputTextField?.text.toString()
-            val id = this.binding?.idInputTextField?.text.toString()
-            val phone = this.binding?.phoneInputTextField?.text.toString()
-            val address = this.binding?.addressInputTextField?.text.toString()
-            val isPresent = this.binding?.isPresentCheckbox?.isChecked ?: false
+            val name = this.binding?.nameInputEditText?.text.toString()
+            val id = this.binding?.idInputEditText?.text.toString()
+            val phone = this.binding?.phoneInputEditText?.text.toString()
+            val address = this.binding?.addressInputEditText?.text.toString()
+            val isPresent = this.binding?.studentPresenceCheckbox?.isChecked ?: false
 
             if(studentIndex != -1) {
                 val studentToEdit = Model.shared.students[studentIndex]

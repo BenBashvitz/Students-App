@@ -36,7 +36,7 @@
         app:srcCompat="@drawable/avatar" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/nameTextInputLayout"
+        android:id="@+id/name_text_input_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -48,14 +48,14 @@
         app:layout_constraintTop_toBottomOf="@id/avatar_image_view">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/nameInputTextField"
+            android:id="@+id/name_input_edit_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/idTextInputLayout"
+        android:id="@+id/id_text_input_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -64,17 +64,17 @@
         android:hint="@string/id_label"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nameTextInputLayout">
+        app:layout_constraintTop_toBottomOf="@+id/name_text_input_layout">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/idInputTextField"
+            android:id="@+id/id_input_edit_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/phoneTextInputLayout"
+        android:id="@+id/phone_text_input_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -83,17 +83,17 @@
         android:hint="@string/phone_label"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/idTextInputLayout">
+        app:layout_constraintTop_toBottomOf="@+id/id_text_input_layout">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/phoneInputTextField"
+            android:id="@+id/phone_input_edit_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/addressTextInputLayout"
+        android:id="@+id/address_text_input_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -102,17 +102,17 @@
         android:hint="@string/address_label"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/phoneTextInputLayout">
+        app:layout_constraintTop_toBottomOf="@+id/phone_text_input_layout">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/addressInputTextField"
+            android:id="@+id/address_input_edit_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/isPresentText"
+        android:id="@+id/student_presence_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -120,20 +120,20 @@
         android:gravity="start|center_vertical"
         android:text="@string/student_presence_label"
         android:textAlignment="viewStart"
-        app:layout_constraintStart_toEndOf="@+id/isPresentCheckbox"
-        app:layout_constraintTop_toBottomOf="@id/addressTextInputLayout" />
+        app:layout_constraintStart_toEndOf="@+id/student_presence_checkbox"
+        app:layout_constraintTop_toBottomOf="@id/address_text_input_layout" />
 
     <com.google.android.material.checkbox.MaterialCheckBox
-        android:id="@+id/isPresentCheckbox"
+        android:id="@+id/student_presence_checkbox"
         android:layout_width="20dp"
         android:layout_height="20dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/addressTextInputLayout" />
+        app:layout_constraintTop_toBottomOf="@+id/address_text_input_layout" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/saveButton"
+        android:id="@+id/save_button"
         android:layout_width="0dp"
         android:layout_height="70dp"
         android:layout_gravity="bottom|end"
@@ -147,10 +147,10 @@
         app:cornerRadius="14dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/cancelButton" />
+        app:layout_constraintStart_toEndOf="@id/cancel_button" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/cancelButton"
+        android:id="@+id/cancel_button"
         android:layout_width="0dp"
         android:layout_height="70dp"
         android:layout_gravity="bottom|end"
@@ -163,7 +163,7 @@
         app:backgroundTint="#DEDADA"
         app:cornerRadius="14dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/saveButton"
+        app:layout_constraintEnd_toStartOf="@+id/save_button"
         app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
