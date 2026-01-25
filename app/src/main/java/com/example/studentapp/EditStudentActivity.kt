@@ -25,6 +25,10 @@ class EditStudentActivity : AppCompatActivity() {
             insets
         }
 
+        this.binding?.appBar?.setNavigationOnClickListener {
+            finish()
+        }
+
         val notAvailable = getString(R.string.not_available)
         val studentName = intent.getStringExtra("student_name") ?: notAvailable
         val studentId = intent.getStringExtra("student_id") ?: notAvailable
