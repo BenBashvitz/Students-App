@@ -32,5 +32,9 @@ class StudentDetailsActivity : AppCompatActivity() {
         binding?.studentNameTextView?.text = studentName
         binding?.studentIdTextView?.text = studentId
         binding?.studentPresenceCheckbox?.isChecked = studentPresent
+
+        binding?.appBar?.setNavigationOnClickListener {
+            finish()
+        }
     }
 }

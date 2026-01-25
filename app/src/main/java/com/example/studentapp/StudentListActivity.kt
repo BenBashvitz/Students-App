@@ -44,6 +44,10 @@ class StudentListActivity : AppCompatActivity() {
 
         this.adapter = StudentsAdapter(Model.shared.students)
 
+        this.binding?.appBar?.setNavigationOnClickListener {
+            finish()
+        }
+
         this.adapter?.listener = object: OnItemClickListener {
             override fun onStudentItemClick(student: Student) {
                 val intent = Intent(this@StudentListActivity, StudentDetailsActivity::class.java)
