@@ -61,8 +61,6 @@ class EditStudentActivity : AppCompatActivity() {
                 intent.putExtra("student_index", studentIndex)
                 startActivity(intent)
             } else {
-                val returnIntent = Intent()
-                setResult(RESULT_CANCELED, returnIntent)
                 finish()
             }
         }
@@ -75,15 +73,11 @@ class EditStudentActivity : AppCompatActivity() {
                 intent.putExtra("student_index", studentIndex)
                 startActivity(intent)
             } else {
-                val returnIntent = Intent()
-                setResult(RESULT_CANCELED, returnIntent)
                 finish()
             }
         }
 
         this.binding?.cancelButton?.setOnClickListener {
-            val returnIntent = Intent()
-            setResult(RESULT_CANCELED, returnIntent)
             finish()
         }
     }
