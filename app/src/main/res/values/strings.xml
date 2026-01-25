@@ -14,9 +14,9 @@
 
     <string name="add_button">+</string>
     <string name="edit_button">EDIT</string>
-    <string name="delete_student_text">Delete</string>
-    <string name="save_student_text">Save</string>
-    <string name="cancel_text">Cancel</string>
+    <string name="delete_student_text">DELETE</string>
+    <string name="save_student_text">SAVE</string>
+    <string name="cancel_text">CANCEL</string>
 
     <string name="not_available">N/A</string>
     <string name="placeholder_text">TextView</string>
