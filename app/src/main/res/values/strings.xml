@@ -4,6 +4,7 @@
     <string name="students_list">Students List</string>
     <string name="students_details">Students Details</string>
     <string name="add_student">New Student</string>
+    <string name="edit_student">Edit Student</string>
 
     <string name="name_label">Name</string>
     <string name="id_label">Id</string>
@@ -17,5 +18,6 @@
     <string name="not_available">N/A</string>
     <string name="student_presence_label">Checked</string>
     <string name="save_student_text">Save</string>
+    <string name="delete_student_text">Delete</string>
     <string name="cancel_text">Cancel</string>
 </resources>

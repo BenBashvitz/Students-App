@@ -19,7 +19,7 @@ class StudentRowViewHolder(
 
         itemView.setOnClickListener {
             this.student?.let { student ->
-                this.listener?.onStudentItemClick(student)
+                this.listener?.onStudentItemClick(student, this.absoluteAdapterPosition)
             }
         }
     }

@@ -44,17 +44,32 @@ class StudentListActivity : AppCompatActivity() {
 
         this.adapter = StudentsAdapter(Model.shared.students)
 
-        this.adapter?.listener = object: OnItemClickListener {
-            override fun onStudentItemClick(student: Student) {
+        this.adapter?.listener = object : OnItemClickListener {
+            override fun onStudentItemClick(student: Student, position: Int?) {
                 val intent = Intent(this@StudentListActivity, StudentDetailsActivity::class.java)
                 intent.putExtra("student_name", student.name)
                 intent.putExtra("student_id", student.id)
+                intent.putExtra("student_phone", student.phone)
+                intent.putExtra("student_address", student.address)
                 intent.putExtra("student_present", student.isPresent)
+                intent.putExtra("student_index", position)
                 startActivity(intent)
             }
         }
 
         this.binding?.recyclerView?.adapter = adapter
+
+        val studentIndex = intent.getIntExtra("student_index", -1)
+
+        if(studentIndex != -1) {
+            val isSave = intent.getBooleanExtra("is_save", true)
+
+            if(isSave) {
+                this.adapter?.notifyItemChanged(studentIndex)
+            } else {
+                this.adapter?.notifyItemRemoved(studentIndex)
+            }
+        }
 
         this.binding?.addStudentButton?.setOnClickListener {
             val intent = Intent(this, AddStudentActivity::class.java)

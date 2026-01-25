@@ -1,5 +1,6 @@
 package com.example.studentapp
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -27,10 +28,24 @@ class StudentDetailsActivity : AppCompatActivity() {
         val notAvailable = getString(R.string.not_available)
         val studentName = intent.getStringExtra("student_name") ?: notAvailable
         val studentId = intent.getStringExtra("student_id") ?: notAvailable
+        val studentPhone = intent.getStringExtra("student_phone") ?: notAvailable
+        val studentAddress = intent.getStringExtra("student_address") ?: notAvailable
         val studentPresent = intent.getBooleanExtra("student_present", false)
+        val studentIndex = intent.getIntExtra("student_index", -1)
 
         binding?.studentNameTextView?.text = studentName
         binding?.studentIdTextView?.text = studentId
         binding?.studentPresenceCheckbox?.isChecked = studentPresent
+
+        this.binding?.editStudentDetailsButton?.setOnClickListener {
+            val intent = Intent(this@StudentDetailsActivity, EditStudentActivity::class.java)
+            intent.putExtra("student_index", studentIndex)
+            intent.putExtra("student_name", studentName)
+            intent.putExtra("student_id", studentId)
+            intent.putExtra("student_phone", studentPhone)
+            intent.putExtra("student_address", studentAddress)
+            intent.putExtra("student_present", studentPresent)
+            startActivity(intent)
+        }
     }
 }

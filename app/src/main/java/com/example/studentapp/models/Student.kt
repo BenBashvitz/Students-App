@@ -1,9 +1,9 @@
 package com.example.studentapp.models
 
 data class Student(
-    val name: String,
-    val id: String,
-    val phone: String,
-    val address: String,
+    var name: String,
+    var id: String,
+    var phone: String,
+    var address: String,
     var isPresent: Boolean,
 )
