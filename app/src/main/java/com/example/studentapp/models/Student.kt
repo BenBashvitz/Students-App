@@ -42,7 +42,7 @@ fun passStudentToIntent(intent: Intent, student: Student) {
     intent.putExtra("student_present", student.isPresent)
 }
 
-fun passStudentPositionToIntent(intent: Intent, position: Int?) {
+fun passStudentPositionToIntent(intent: Intent, position: Int) {
     intent.putExtra("student_index", position)
 }
 

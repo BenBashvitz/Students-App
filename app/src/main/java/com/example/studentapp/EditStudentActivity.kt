@@ -51,7 +51,9 @@ class EditStudentActivity : AppCompatActivity() {
             val address = this.binding?.addressInputEditText?.text.toString()
             val isPresent = this.binding?.studentPresenceCheckbox?.isChecked ?: false
 
-            if(studentIndex != -1) {
+            if(studentIndex == -1) {
+                finish()
+            } else {
                 val studentToEdit = Model.shared.students[studentIndex]
 
                 studentToEdit.id = id
@@ -60,26 +62,23 @@ class EditStudentActivity : AppCompatActivity() {
                 studentToEdit.address = address
                 studentToEdit.isPresent = isPresent
 
-                val intent = Intent(this, StudentListActivity::class.java)
+                val intent = Intent()
                 passIsSaveToIntent(intent, true)
                 passStudentPositionToIntent(intent, studentIndex)
                 setResult(RESULT_OK, intent)
-                finish()
-
-            } else {
                 finish()
             }
         }
 
         this.binding?.deleteButton?.setOnClickListener {
-            if(studentIndex != -1) {
+            if(studentIndex == -1) {
+                finish()
+            } else {
                 Model.shared.students.removeAt(studentIndex)
-                val intent = Intent(this, StudentListActivity::class.java)
+                val intent = Intent()
                 passIsSaveToIntent(intent, false)
                 passStudentPositionToIntent(intent, studentIndex)
                 setResult(RESULT_OK, intent)
-                finish()
-            } else {
                 finish()
             }
         }

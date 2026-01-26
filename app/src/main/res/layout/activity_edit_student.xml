@@ -147,10 +147,10 @@
         app:cornerRadius="14dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/deleteButton" />
+        app:layout_constraintStart_toEndOf="@id/delete_button" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/deleteButton"
+        android:id="@+id/delete_button"
         android:layout_width="0dp"
         android:layout_height="70dp"
         android:layout_gravity="bottom|end"
@@ -180,7 +180,7 @@
         app:backgroundTint="#DEDADA"
         app:cornerRadius="14dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/deleteButton"
+        app:layout_constraintEnd_toStartOf="@id/delete_button"
         app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

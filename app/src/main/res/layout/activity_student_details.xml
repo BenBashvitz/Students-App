@@ -88,7 +88,7 @@
         app:layout_constraintStart_toEndOf="@+id/student_address_field_text_view" />
 
     <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/student_presence"
+        android:id="@+id/student_presence_text"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_marginStart="20dp"
@@ -124,7 +124,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/edit_student_details_button"
+        android:id="@+id/edit_button"
         android:layout_width="136dp"
         android:layout_height="66dp"
         android:layout_margin="16dp"

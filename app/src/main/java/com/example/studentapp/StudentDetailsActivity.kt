@@ -8,7 +8,6 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.studentapp.databinding.ActivityStudentDetailsBinding
-import com.example.studentapp.models.Model
 import com.example.studentapp.models.getStudentFromIntent
 import com.example.studentapp.models.getStudentPositionFromIntent
 import com.example.studentapp.models.passStudentPositionToIntent
@@ -49,7 +48,7 @@ class StudentDetailsActivity : AppCompatActivity() {
         binding?.studentAddressTextView?.text = student.address
         binding?.studentPresenceCheckbox?.isChecked = student.isPresent
 
-        this.binding?.editStudentDetailsButton?.setOnClickListener {
+        this.binding?.editButton?.setOnClickListener {
             val intent = Intent(this, EditStudentActivity::class.java)
             passStudentToIntent(intent, student)
             passStudentPositionToIntent(intent, studentIndex)
