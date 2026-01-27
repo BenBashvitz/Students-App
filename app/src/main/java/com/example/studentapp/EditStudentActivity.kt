@@ -45,45 +45,53 @@ class EditStudentActivity : AppCompatActivity() {
 
 
         this.binding?.saveButton?.setOnClickListener {
-            val name = this.binding?.nameInputEditText?.text.toString()
-            val id = this.binding?.idInputEditText?.text.toString()
-            val phone = this.binding?.phoneInputEditText?.text.toString()
-            val address = this.binding?.addressInputEditText?.text.toString()
-            val isPresent = this.binding?.studentPresenceCheckbox?.isChecked ?: false
-
-            if(studentIndex == -1) {
-                finish()
-            } else {
-                val studentToEdit = Model.shared.students[studentIndex]
-
-                studentToEdit.id = id
-                studentToEdit.name = name
-                studentToEdit.phone = phone
-                studentToEdit.address = address
-                studentToEdit.isPresent = isPresent
-
-                val intent = Intent()
-                passIsSaveToIntent(intent, true)
-                passStudentPositionToIntent(intent, studentIndex)
-                setResult(RESULT_OK, intent)
-                finish()
-            }
+            this.handleSave(studentIndex)
         }
 
         this.binding?.deleteButton?.setOnClickListener {
-            if(studentIndex == -1) {
-                finish()
-            } else {
-                Model.shared.students.removeAt(studentIndex)
-                val intent = Intent()
-                passIsSaveToIntent(intent, false)
-                passStudentPositionToIntent(intent, studentIndex)
-                setResult(RESULT_OK, intent)
-                finish()
-            }
+            this.handleDelete(studentIndex)
         }
 
         this.binding?.cancelButton?.setOnClickListener {
+            finish()
+        }
+    }
+
+    private fun handleSave(studentIndex: Int) {
+        val name = this.binding?.nameInputEditText?.text.toString()
+        val id = this.binding?.idInputEditText?.text.toString()
+        val phone = this.binding?.phoneInputEditText?.text.toString()
+        val address = this.binding?.addressInputEditText?.text.toString()
+        val isPresent = this.binding?.studentPresenceCheckbox?.isChecked ?: false
+
+        if(studentIndex == -1) {
+            finish()
+        } else {
+            val studentToEdit = Model.shared.students[studentIndex]
+
+            studentToEdit.id = id
+            studentToEdit.name = name
+            studentToEdit.phone = phone
+            studentToEdit.address = address
+            studentToEdit.isPresent = isPresent
+
+            val intent = Intent()
+            passIsSaveToIntent(intent, true)
+            passStudentPositionToIntent(intent, studentIndex)
+            setResult(RESULT_OK, intent)
+            finish()
+        }
+    }
+
+    private fun handleDelete(studentIndex: Int) {
+        if(studentIndex == -1) {
+            finish()
+        } else {
+            Model.shared.students.removeAt(studentIndex)
+            val intent = Intent()
+            passIsSaveToIntent(intent, false)
+            passStudentPositionToIntent(intent, studentIndex)
+            setResult(RESULT_OK, intent)
             finish()
         }
     }
