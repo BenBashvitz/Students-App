@@ -7,7 +7,7 @@ import com.example.studentapp.models.Student
 import com.example.studentapp.databinding.StudentRowLayoutBinding
 
 interface OnItemClickListener {
-    fun onStudentItemClick(student: Student)
+    fun onStudentItemClick(student: Student, position: Int)
 }
 
 class StudentsAdapter (

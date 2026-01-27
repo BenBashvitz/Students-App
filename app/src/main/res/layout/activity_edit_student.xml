@@ -14,7 +14,7 @@
         android:layout_marginStart="-8dp"
         android:background="#DEDADA"
         android:minHeight="?attr/actionBarSize"
-        app:title="@string/add_student"
+        app:title="@string/edit_student"
         app:navigationIcon="@drawable/ic_arrow_back"
         app:menu="@menu/top_app_bar"
         app:contentInsetStart="0dp"
@@ -32,7 +32,7 @@
         android:layout_marginTop="20dp"
         android:scaleType="fitStart"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/app_bar"
+        app:layout_constraintTop_toBottomOf="@id/app_bar"
         app:srcCompat="@drawable/avatar" />
 
     <com.google.android.material.textfield.TextInputLayout
@@ -147,6 +147,23 @@
         app:cornerRadius="14dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/delete_button" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/delete_button"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:layout_gravity="bottom|end"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/delete_student_text"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:backgroundTint="#DEDADA"
+        app:cornerRadius="14dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/save_button"
         app:layout_constraintStart_toEndOf="@id/cancel_button" />
 
     <com.google.android.material.button.MaterialButton
@@ -163,7 +180,7 @@
         app:backgroundTint="#DEDADA"
         app:cornerRadius="14dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/save_button"
+        app:layout_constraintEnd_toStartOf="@id/delete_button"
         app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

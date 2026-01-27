@@ -11,6 +11,10 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.studentapp.models.Model
 import com.example.studentapp.models.Student
 import com.example.studentapp.databinding.ActivityStudentListBinding
+import com.example.studentapp.models.getIsSaveFromIntent
+import com.example.studentapp.models.getStudentPositionFromIntent
+import com.example.studentapp.models.passStudentPositionToIntent
+import com.example.studentapp.models.passStudentToIntent
 import kotlin.jvm.java
 
 class StudentListActivity : AppCompatActivity() {
@@ -21,6 +25,27 @@ class StudentListActivity : AppCompatActivity() {
         registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
             if (result.resultCode == RESULT_OK) {
                 this.adapter?.notifyItemInserted(Model.shared.students.size - 1)
+            }
+        }
+
+    private val studentDetailsActivityResultLauncher =
+        registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
+            if (result.resultCode == RESULT_OK) {
+                val resultData = result.data
+
+                resultData?.let { intent ->
+                    val studentIndex = getStudentPositionFromIntent(intent)
+
+                    if(studentIndex != -1) {
+                        val isSave = getIsSaveFromIntent(intent)
+
+                        if(isSave) {
+                            this.adapter?.notifyItemChanged(studentIndex)
+                        } else {
+                            this.adapter?.notifyItemRemoved(studentIndex)
+                        }
+                    }
+                }
             }
         }
 
@@ -48,13 +73,13 @@ class StudentListActivity : AppCompatActivity() {
             finish()
         }
 
-        this.adapter?.listener = object: OnItemClickListener {
-            override fun onStudentItemClick(student: Student) {
+        this.adapter?.listener = object : OnItemClickListener {
+            override fun onStudentItemClick(student: Student, position: Int) {
                 val intent = Intent(this@StudentListActivity, StudentDetailsActivity::class.java)
-                intent.putExtra("student_name", student.name)
-                intent.putExtra("student_id", student.id)
-                intent.putExtra("student_present", student.isPresent)
-                startActivity(intent)
+                passStudentToIntent(intent, student)
+                passStudentPositionToIntent(intent, position)
+
+                studentDetailsActivityResultLauncher.launch(intent)
             }
         }
 

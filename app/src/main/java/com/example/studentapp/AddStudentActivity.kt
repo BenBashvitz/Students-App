@@ -31,11 +31,11 @@ class AddStudentActivity : AppCompatActivity() {
         }
 
         this.binding?.saveButton?.setOnClickListener {
-            val name = this.binding?.nameInputTextField?.text.toString()
-            val id = this.binding?.idInputTextField?.text.toString()
-            val phone = this.binding?.phoneInputTextField?.text.toString()
-            val address = this.binding?.addressInputTextField?.text.toString()
-            val isPresent = this.binding?.isPresentCheckbox?.isChecked ?: false
+            val name = this.binding?.nameInputEditText?.text.toString()
+            val id = this.binding?.idInputEditText?.text.toString()
+            val phone = this.binding?.phoneInputEditText?.text.toString()
+            val address = this.binding?.addressInputEditText?.text.toString()
+            val isPresent = this.binding?.studentPresenceCheckbox?.isChecked ?: false
 
             Model.shared.students.add(Student(
                 name,
@@ -51,8 +51,6 @@ class AddStudentActivity : AppCompatActivity() {
         }
 
         this.binding?.cancelButton?.setOnClickListener {
-            val returnIntent = Intent()
-            setResult(RESULT_CANCELED, returnIntent)
             finish()
         }
     }
